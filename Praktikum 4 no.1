@@ -1,0 +1,40 @@
+#class calculate area of square
+class Square:
+    def __init__(self,side):
+        self.side = side
+    def area(self):
+        return self.side * self.side
+
+#class calculate area of triangle
+class Triangle:
+    def __init__(self,base,height):
+        self.base = base
+        self.height = height
+    def area(self):
+        return 0.5 * self.base * self.height
+
+#class calculate area of parallelogram
+class Parallelogram:
+    def __init__(self,base,height):
+        self.base = base
+        self.height = height
+    def area(self):
+        return self.base * self.height
+
+switch = int(input("Enter 1 for square, 2 for triangle, 3 for parallelogram: "))
+if switch == 1 :
+    side = float(input("Enter side: "))
+    square = Square(side)
+    print("Area of square is: ", square.area())
+elif switch == 2 :
+    base = float(input("Enter base: "))
+    height = float(input("Enter height: "))
+    triangle = Triangle(base,height)
+    print("Area of triangle is: ", triangle.area())
+elif switch == 3 :
+    base = float(input("Enter base: "))
+    height = float(input("Enter height: "))
+    parallelogram = Parallelogram(base,height)
+    print("Area of parallelogram is: ", parallelogram.area())
+else:
+    print("Invalid input")
